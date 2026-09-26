@@ -36,14 +36,19 @@ mental_health_resources = [
     }
 ]
 
-prompt = """
-^ WRITE YOUR PROMPT HERE
-"""
-
+prompt = f"""
+            Here is the needed information for the system prompt: {mental_health_resources}. The question the user asked was: {user_question}
+          """
 
 # ^ If your team decides to write a system prompt do so here, if not leave it empty
 
-system_prompt =  ""
+system_prompt =  """
+You are a legal advisor assistant helping sudanese newcomers and
+refugees through their legal process into Canada. You must give
+accurate and factual information by using the information given to you and format it in a user-friendly way where it
+clearly displays the information in the form of a list in order from most important to least important (name, service, ). Then, write a clear description
+that serves as an introduction to the given places where it will give them all the necessary information they need to know.
+"""
 
 #! Don't change anything below
 
