@@ -34,7 +34,24 @@ food_resources = [
         "cost": "Free for eligible participants."
     }
 ]
+
+
+
 prompt = f"""
+For each relevant resource, return:
+Name
+address
+hours 
+languages
+cost
+eligibility
+
+
+Only include information that is available in food_resources. Do not make up, infer, or assume any missing information. If a required detail is not available, write **“Not provided”** for that field.
+
+Keep the answer concise and easy to scan. If there are no relevant resources or there is not enough information to answer the question, clearly say so.
+
+
 User question:
 {user_question}
 

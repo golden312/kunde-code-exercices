@@ -35,8 +35,12 @@ housing_resources = [
         "cost": "Free."
     }
 ]
-prompt = """
-^ WRITE YOUR PROMPT HERE
+prompt = """Answer the user's question using only the information provided 
+in housing_resources. Present the resources in a clear, organized
+format that is easy to read. For each resource, include its name,
+service, address, phone number, hours, languages, eligibility, 
+and cost. Number the resources and separate each one with a divider.
+Do not invent or add information that is not present in the data.
 """
 
 # ^ If your team decides to write a system prompt do so here, if not leave it empty
