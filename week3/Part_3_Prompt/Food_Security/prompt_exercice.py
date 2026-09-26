@@ -34,24 +34,23 @@ food_resources = [
         "cost": "Free for eligible participants."
     }
 ]
+
+
+
 prompt = f"""
-Answer the user's question using ONLY the food resource information provided below.
+For each relevant resource, return:
+Name
+address
+hours 
+languages
+cost
+eligibility
 
-Identify the resources that are relevant to the user's request. For each relevant resource, explain:
-- the organization's name
-- what food assistance it provides
-- where it is located
-- its phone number
-- its hours
-- available languages
-- eligibility requirements
-- cost
 
-Make the answer clear and easy to scan. Prioritize information that would help someone decide which resource they can actually use.
+Only include information that is available in food_resources. Do not make up, infer, or assume any missing information. If a required detail is not available, write **“Not provided”** for that field.
 
-Do not invent, assume, or add information that is not provided in the resources. If an important piece of information is missing, say that it was not provided.
+Keep the answer concise and easy to scan. If there are no relevant resources or there is not enough information to answer the question, clearly say so.
 
-If none of the resources are relevant to the user's question, clearly say that the provided resources do not contain a suitable option.
 
 User question:
 {user_question}
