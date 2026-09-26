@@ -22,7 +22,7 @@ health_resources = [
         "languages": ["English", "French"],
         "eligibility": "Appointments depend on availability.",
         "cost": "OHIP-covered services are generally free."
-    },
+    }, 
     {
         "name": "Newcomer Dental Support Program",
         "service": "Dental care assistance for eligible newcomers",
@@ -35,7 +35,10 @@ health_resources = [
     }
 ]
 prompt = """
-^ WRITE YOUR PROMPT HERE
+Answer the user's question using ONLY the healthcare ressource informations provided below.
+
+Make the answer a numbered list Prioritize languages put practitioners who speak Arabic at the top of the list 
+Do not use: profanity a complex vocabulary
 """
 
 
