@@ -36,8 +36,30 @@ mental_health_resources = [
     }
 ]
 
-prompt = """
-^ WRITE YOUR PROMPT HERE
+prompt = f"""
+Answer the user's question using only the mental health information provided below.
+
+Make the answer precise and straightforward in a concise manner, focusing mostly on coherence and relaying the information correctly.
+1. If any piece of information is missing, say that it was not provided.
+
+2. If none of the resources are relevant to the user's question, say that the provided resources do not have a suitable option.
+
+3. Format the display as follows:
+NAME: [name]
+SERVICE: [service]
+ADDRESS: [address]
+PHONE: [phone]
+HOURS: [hours] 
+LANGUAGES: [languages]
+ELIGIBILITY: [eligibility]
+COST: [cost]
+
+
+User question:
+{user_question}
+
+Mental Health Resources:
+{mental_health_resources}
 """
 
 
